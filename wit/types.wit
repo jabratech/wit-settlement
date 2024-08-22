@@ -59,7 +59,7 @@ interface types {
     }
 
     record fetch-settlement-response {
-        code: i16,
+        code: s16,
         message: string,
         settlements: list<settlement>
     }

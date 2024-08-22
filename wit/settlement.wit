@@ -1,4 +1,6 @@
 interface handler {
+    use types.{settlement-type, settlement-status, fetch-settlement-response};
+    use jabratech:types.{response};
     get: func(collateral-exchange-settlement: option<settlement-type>, status: option<settlement-status>, currency: option<list<string>>) -> result<fetch-settlement-response, response>;
     get-by-trade-id: func (trade-id: u64) -> result<fetch-settlement-response, response>;
 }
